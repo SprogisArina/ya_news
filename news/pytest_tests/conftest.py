@@ -93,3 +93,10 @@ def many_comments(author, news):
         for index in range(10)
     ]
     return Comment.objects.bulk_create(all_comments)
+
+
+@pytest.fixture
+def comment_form():
+    return {
+        'text': 'Новый текст комментария'
+    }
